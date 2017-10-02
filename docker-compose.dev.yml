@@ -1,0 +1,12 @@
+version: '2'
+services:
+  webserver:
+    build: webserver/.
+    volumes:
+      - ./webserver/logs:/var/log/nginx   
+  
+  proxy:
+    build: haproxy/.
+    ports:
+      - "80:80"
+      - "443:443"
