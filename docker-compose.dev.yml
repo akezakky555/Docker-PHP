@@ -3,7 +3,7 @@ services:
   webserver:
     build: webserver/.
     volumes:
-      - ./webserver/logs:/var/log/nginx   
+      - ./webserver/logs:/var/log/nginx
   
   proxy:
     build: haproxy/.

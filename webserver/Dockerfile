@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y curl build-essential php-dev libphp-embed php-fpm php-pgsql supervisor \
+RUN apt-get update && apt-get install -y curl build-essential php-dev php-curl libphp-embed php-fpm php-pgsql supervisor \
     && curl -O http://nginx.org/keys/nginx_signing.key \
     && apt-key add nginx_signing.key \
     && echo "deb http://nginx.org/packages/mainline/ubuntu/ xenial nginx" >> /etc/apt/sources.list \
