@@ -1,0 +1,104 @@
+# MaxScale documentation on GitHub:
+# https://github.com/mariadb-corporation/MaxScale/blob/2.1/Documentation/Documentation-Contents.md
+
+# Global parameters
+#
+# Complete list of configuration options:
+# https://github.com/mariadb-corporation/MaxScale/blob/2.1/Documentation/Getting-Started/Configuration-Guide.md
+
+[maxscale]
+threads=4
+
+# Server definitions
+#
+# Set the address of the server to the network
+# address of a MySQL server.
+#
+
+[server1]
+type=server
+address=mariadb-master
+port=3306
+protocol=MySQLBackend
+
+[server2]
+type=server
+address=mariadb-slave
+port=3306
+protocol=MySQLBackend
+
+
+
+# Monitor for the servers
+#
+# This will keep MaxScale aware of the state of the servers.
+# MySQL Monitor documentation:
+# https://github.com/mariadb-corporation/MaxScale/blob/2.1/Documentation/Monitors/MySQL-Monitor.md
+
+[MySQL Monitor]
+type=monitor
+module=mysqlmon
+servers=server1,server2
+user=my_user
+passwd=my_password
+monitor_interval=10000
+
+# Service definitions
+#
+# Service Definition for a read-only service and
+# a read/write splitting service.
+#
+
+# ReadConnRoute documentation:
+# https://github.com/mariadb-corporation/MaxScale/blob/2.1/Documentation/Routers/ReadConnRoute.md
+
+[Read-Only Service]
+type=service
+router=readconnroute
+servers=server2
+user=my_user
+passwd=my_password
+router_options=slave
+
+# ReadWriteSplit documentation:
+# https://github.com/mariadb-corporation/MaxScale/blob/2.1/Documentation/Routers/ReadWriteSplit.md
+
+[Read-Write Service]
+type=service
+router=readwritesplit
+servers=server1,server2
+user=my_user
+passwd=my_password
+max_slave_connections=100%
+
+# This service enables the use of the MaxAdmin interface
+# MaxScale administration guide:
+# https://github.com/mariadb-corporation/MaxScale/blob/2.1/Documentation/Reference/MaxAdmin.md
+
+[MaxAdmin Service]
+type=service
+router=cli
+
+# Listener definitions for the services
+#
+# These listeners represent the ports the
+# services will listen on.
+#
+
+[Read-Only Listener]
+type=listener
+service=Read-Only Service
+protocol=MySQLClient
+port=4008
+
+[Read-Write Listener]
+type=listener
+service=Read-Write Service
+protocol=MySQLClient
+port=4006
+
+[MaxAdmin Listener]
+type=listener
+service=MaxAdmin Service
+protocol=maxscaled
+socket=default
