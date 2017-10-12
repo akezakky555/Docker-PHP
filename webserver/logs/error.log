@@ -436,3 +436,42 @@
 2017/10/02 07:41:03 [error] 9#9: *3 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 27.55.129.177, server: apps, request: "GET /favicon.ico HTTP/1.1", host: "128.199.205.94"
 2017/10/02 07:41:38 [error] 9#9: *4 "/var/www/apps/search/sxx-video-hd-xx/index.php" is not found (2: No such file or directory), client: 162.158.74.61, server: apps, request: "GET /search/sxx-video-hd-xx/?orderby=comments HTTP/1.1", host: "thexxxx.net"
 2017/10/02 07:41:38 [error] 9#9: *4 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 162.158.74.61, server: apps, request: "GET /search/sxx-video-hd-xx/?orderby=comments HTTP/1.1", host: "thexxxx.net"
+2017/10/03 11:38:55 [error] 9#9: *3 open() "/var/www/apps/favicon.ico" failed (2: No such file or directory), client: 172.18.0.3, server: apps, request: "GET /favicon.ico HTTP/1.1", host: "10.54.1.250", referrer: "http://10.54.1.250/"
+2017/10/03 11:38:55 [error] 9#9: *3 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 172.18.0.3, server: apps, request: "GET /favicon.ico HTTP/1.1", host: "10.54.1.250", referrer: "http://10.54.1.250/"
+2017/10/06 01:55:06 [error] 10#10: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:07 [error] 10#10: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:07 [error] 10#10: *5 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:08 [error] 10#10: *7 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:09 [error] 10#10: *9 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:09 [error] 10#10: *11 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:09 [error] 10#10: *13 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:10 [error] 10#10: *15 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 01:55:10 [error] 10#10: *17 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /search.php HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 02:13:56 [error] 11#11: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /var/www/apps/public/routing.php:59
+Stack trace:
+#0 /var/www/apps/public/routing.php(49): httpGet('http://10.54.1....')
+#1 {main}
+  thrown in /var/www/apps/public/routing.php on line 59" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /routing.php?waypoint=98.788807,18.564259;99.551377,7.950813&alternatives=true&steps=true&key=e10adc3949ba59abbe56e057f20f883e HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 02:14:24 [error] 11#11: *7 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /var/www/apps/public/routing.php:59
+Stack trace:
+#0 /var/www/apps/public/routing.php(49): httpGet('http://10.54.1....')
+#1 {main}
+  thrown in /var/www/apps/public/routing.php on line 59" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /routing.php?waypoint=98.788807,18.564259;99.551377,7.950813&alternatives=true&steps=true&key=e10adc3949ba59abbe56e057f20f883e HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 02:15:33 [error] 11#11: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /var/www/apps/public/routing.php:59
+Stack trace:
+#0 /var/www/apps/public/routing.php(49): httpGet('http://10.54.1....')
+#1 {main}
+  thrown in /var/www/apps/public/routing.php on line 59" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /routing.php?waypoint=98.788807,18.564259;99.551377,7.950813&alternatives=true&steps=true&key=e10adc3949ba59abbe56e057f20f883e HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 02:16:32 [error] 11#11: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /var/www/apps/public/routing.php:59
+Stack trace:
+#0 /var/www/apps/public/routing.php(49): httpGet('http://10.54.1....')
+#1 {main}
+  thrown in /var/www/apps/public/routing.php on line 59" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /routing.php?waypoint=98.788807,18.564259;99.551377,7.950813&key=e10adc3949ba59abbe56e057f20f883e HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 02:17:21 [error] 11#11: *19 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function curl_init() in /var/www/apps/public/routing.php:59
+Stack trace:
+#0 /var/www/apps/public/routing.php(49): httpGet('http://10.54.1....')
+#1 {main}
+  thrown in /var/www/apps/public/routing.php on line 59" while reading response header from upstream, client: 172.18.0.3, server: apps, request: "GET /routing.php?key=e10adc3949ba59abbe56e057f20f883e&waypoint=98.788807,18.564259;99.551377,7.950813 HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "10.54.1.250"
+2017/10/06 02:28:10 [error] 9#9: *5 directory index of "/var/www/apps/public/" is forbidden, client: 172.18.0.3, server: apps, request: "GET / HTTP/1.1", host: "10.54.1.250"
+2017/10/09 07:07:41 [error] 9#9: *589320 open() "/var/www/apps/public/favicon.ico" failed (2: No such file or directory), client: 172.18.0.3, server: apps, request: "GET /favicon.ico HTTP/1.1", host: "10.54.1.250", referrer: "http://10.54.1.250/routing.php?key=e10adc3949ba59abbe56e057f20f883e&waypoint=98.788807,18.564259;99.551377,7.950813"
+2017/10/09 07:07:41 [error] 9#9: *589320 open() "/var/www/error/404.html" failed (2: No such file or directory), client: 172.18.0.3, server: apps, request: "GET /favicon.ico HTTP/1.1", host: "10.54.1.250", referrer: "http://10.54.1.250/routing.php?key=e10adc3949ba59abbe56e057f20f883e&waypoint=98.788807,18.564259;99.551377,7.950813"
